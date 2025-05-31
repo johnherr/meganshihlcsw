@@ -76,11 +76,6 @@
             <div class="contact-grid">
                 <div class="contact-details">
                     <h2>Get in Touch</h2>
-                    <div class="contact-item">
-                        <h3>📞 Phone</h3>
-                        <p><a href="tel:+1234567890">(XXX) XXX-XXXX</a></p>
-                        <p class="note">Please leave a voicemail if I don't answer - I'll return your call within 24 hours</p>
-                    </div>
 
                     <div class="contact-item">
                         <h3>✉️ Email</h3>
@@ -92,6 +87,9 @@
                         <h3>📍 Location</h3>
                         <p>Denver Metro Area</p>
                         <p class="note">In-person and telehealth sessions available</p>
+                        <div class="map-container">
+                            <div id="map"></div>
+                        </div>
                     </div>
 
                     <div class="contact-item">
@@ -103,7 +101,9 @@
 
                 <!-- Contact Form -->
                 <div class="contact-form-container">
-                    <form id="consultation-form" class="contact-form" action="#" method="POST">
+                    <form id="consultation-form" class="contact-form" action="https://formspree.io/f/mdkznljo" method="POST">
+                        <div id="form-status" class="form-status" style="display: none;"></div>
+
                         <h2>Request Your Free 15-Minute Consultation</h2>
 
                         <div class="form-row">
@@ -163,7 +163,10 @@
                             </label>
                         </div>
 
-                        <button type="submit" class="btn-primary form-submit">Send Consultation Request</button>
+                        <button type="submit" class="btn-primary form-submit">
+                            <span class="button-text">Send Consultation Request</span>
+                            <span class="loading-spinner" style="display: none;">Sending...</span>
+                        </button>
 
                         <p class="form-note">
                             <strong>Please note:</strong> This form is not for urgent mental health concerns.
@@ -244,6 +247,8 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script>
         // Additional contact form functionality
         document.getElementById('consultation-form').addEventListener('submit', function(e) {
@@ -281,6 +286,20 @@
             // Scroll to success message
             successDiv.scrollIntoView({ behavior: 'smooth' });
         }
+
+        // Initialize map
+        const map = L.map('map').setView([39.7555, -105.2211], 11);
+
+        // Add a custom style tile layer
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+
+        // Add custom marker
+        const marker = L.marker([39.7555, -105.2211]).addTo(map);
+        marker.bindPopup("<b>Golden, CO</b><br>Denver Metro Area").openPopup();
     </script>
 </body>
 </html>

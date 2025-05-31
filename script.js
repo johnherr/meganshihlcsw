@@ -79,15 +79,58 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact form functionality (if forms are added later)
-    const contactForms = document.querySelectorAll('form');
-    contactForms.forEach(form => {
-        form.addEventListener('submit', function(e) {
+    // Contact form functionality
+    const consultationForm = document.getElementById('consultation-form');
+    const formStatus = document.getElementById('form-status');
+    const submitButton = consultationForm?.querySelector('.form-submit');
+    const buttonText = submitButton?.querySelector('.button-text');
+    const loadingSpinner = submitButton?.querySelector('.loading-spinner');
+
+    if (consultationForm) {
+        consultationForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            // Add form submission logic here
-            console.log('Form submitted');
+
+            // Show loading state
+            if (submitButton && buttonText && loadingSpinner) {
+                submitButton.disabled = true;
+                buttonText.style.display = 'none';
+                loadingSpinner.style.display = 'inline';
+            }
+
+            try {
+                const formData = new FormData(this);
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Show success message
+                    formStatus.textContent = 'Thank you! Your consultation request has been sent. I will contact you within 24-48 hours.';
+                    formStatus.className = 'form-status success';
+                    formStatus.style.display = 'block';
+                    consultationForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Show error message
+                formStatus.textContent = 'Sorry, there was an error sending your request. Please try again or contact me directly via phone or email.';
+                formStatus.className = 'form-status error';
+                formStatus.style.display = 'block';
+            } finally {
+                // Reset button state
+                if (submitButton && buttonText && loadingSpinner) {
+                    submitButton.disabled = false;
+                    buttonText.style.display = 'inline';
+                    loadingSpinner.style.display = 'none';
+                }
+            }
         });
-    });
+    }
 
     // Accessibility: Focus management for dropdown menus
     const dropdowns = document.querySelectorAll('.dropdown');
