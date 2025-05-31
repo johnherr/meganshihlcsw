@@ -23,6 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Also close mobile menu when clicking any Schedule Consultation button in nav-cta
+    document.querySelectorAll('.nav-cta .btn-primary').forEach(scheduleBtn => {
+        scheduleBtn.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+
     // Navbar scroll effect
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {

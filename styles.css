@@ -902,12 +902,12 @@ p {
     }
 
     .logo-image {
-        height: 120px;
+        height: 48px;
     }
 
     .nav-content {
-        min-height: 140px;
-        padding: 15px 20px;
+        min-height: 70px;
+        padding: 8px 16px;
     }
 
     .nav-menu {
@@ -957,6 +957,17 @@ p {
 
     .map-container iframe {
         height: 250px;
+    }
+
+    .nav-cta {
+        display: none !important;
+    }
+
+    .nav-menu.active .nav-cta {
+        display: block !important;
+        margin: 16px auto 0 auto;
+        text-align: center;
+        max-width: 90vw;
     }
 
     :root {
