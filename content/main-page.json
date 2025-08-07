@@ -1,0 +1,95 @@
+{
+    "hero": {
+        "title": "Therapy to Reconnect, Heal, and Flourish",
+        "subtitle": "Trauma-informed therapy for those feeling stuck in patterns, relationships, or emotions. Together, we'll create space for authentic healing and growth.",
+        "buttons": {
+            "primary": "Start Your Journey",
+            "secondary": "Learn About My Approach"
+        }
+    },
+    "therapyWithMe": {
+        "title": "therapy with me",
+        "content": [
+            "I find joy in working with clients who are feeling \"stuck.\" This can look like a variety of ways: feeling stuck in relationships; stuck in unhealthy patterns; stuck in emotions that make it difficult to experience healing, etc. You will be a good fit for me if you're someone who has had a history of painful and wounding events that you've pushed aside, and are now sensing the impacts of those moments. As a trauma-informed therapist, I work with my clients to make sense of their history, change the narratives that might be causing them suffering, and to create a new story that allows authentic flourishing.",
+            "Alongside a psychodynamic approach, I offer specific trauma interventions including EMDR and CPT. I strive to see my clients not only connect the present symptoms with the past, but to make distinct behavioral changes. As your therapist, you will experience not only clinical support, but a genuine relationship that I believe paves the way for lasting change.",
+            "I stand by research that shows that therapy is most effective when therapeutic alliance between client and therapist is strong, so if it does not feel like I will be the best therapy fit for you, I will support you in finding other resources. To learn more about me and my therapy style, I invite you to reach out for a free 15-min consult."
+        ]
+    },
+    "services": {
+        "title": "How I Can Help You",
+        "services": [
+            {
+                "title": "Individual Therapy",
+                "description": "Process past wounds and create new narratives through psychodynamic therapy focused on lasting change.",
+                "icon": "individual-therapy-icon.svg"
+            },
+            {
+                "title": "EMDR",
+                "description": "Eye Movement Desensitization and Reprocessing to help process traumatic memories and reduce their emotional impact.",
+                "icon": "emdr-icon.svg"
+            },
+            {
+                "title": "Cognitive Processing Therapy",
+                "description": "Evidence-based treatment for trauma that helps you process and make sense of difficult experiences.",
+                "icon": "cpt-icon.svg"
+            }
+        ]
+    },
+    "education": {
+        "title": "my education",
+        "items": [
+            "B.S. UC Berkeley",
+            "M.S.W. UNC Chapel Hill",
+            "Post-MSW Fellowship at University of Colorado, Boulder Counseling and Psychiatric Services"
+        ]
+    },
+    "experience": {
+        "title": "experience & training",
+        "content": "I have experience in the mental health field through a psychiatric inpatient setting, university counseling centers, and private practice. Thus, I have seen a vast array of clients ranging in adult age and in psychological experience. I am a Licensed Clinical Social Worker (#09926822) trained in various institutions, including a post-masters fellowship at CU Boulder, where I sharpened my clinical skills related to individual and group psychotherapy, crisis interventions, and integrative behavioral health."
+    },
+    "outsideOffice": {
+        "title": "who i am outside the therapy office",
+        "content": "I am a daughter of Taiwanese immigrants and mom of two young kids. My favorite self-care activities are reading books, riding my bike, running, and unstructured time with close friends. I have a deep passion for high quality boba and am consistently trying to find the best boba in the Denver Metro area."
+    },
+    "contactPreview": {
+        "title": "Ready to Take the Next Step?",
+        "subtitle": "I offer a free 15-minute consultation to see if we're a good fit. Reach out today to begin your healing journey.",
+        "cards": [
+            {
+                "title": "Free Consultation",
+                "description": "15-minute phone call to discuss your needs and see if we're a good fit.",
+                "buttonText": "Schedule Now",
+                "buttonLink": "contact.html"
+            },
+            {
+                "title": "Questions?",
+                "description": "Feel free to reach out with any questions about therapy or my approach.",
+                "buttonText": "Send Email",
+                "buttonLink": "mailto:contact@meganshihlcsw.com"
+            }
+        ]
+    },
+    "footer": {
+        "mainInfo": {
+            "name": "Megan Shih, LCSW",
+            "description": "Trauma-informed therapy in Denver Metro area",
+            "license": "License #09926822"
+        },
+        "services": [
+            "Individual Therapy",
+            "EMDR",
+            "CPT",
+            "Trauma Therapy"
+        ],
+        "information": [
+            "Fees & Insurance",
+            "Policies",
+            "Resources",
+            "Blog"
+        ],
+        "contact": {
+            "location": "Denver Metro Area",
+            "email": "contact@meganshihlcsw.com"
+        }
+    }
+}
